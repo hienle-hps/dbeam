@@ -197,7 +197,7 @@ public class JdbcAvroIO {
           query,
           ResultSet.TYPE_FORWARD_ONLY,
           ResultSet.CONCUR_READ_ONLY);
-      statement.setFetchSize(FETCH_SIZE);
+      statement.setFetchSize(Integer.MIN_VALUE);
       if (jdbcAvroOptions.getStatementPreparator() != null) {
         jdbcAvroOptions.getStatementPreparator().setParameters(statement);
       }

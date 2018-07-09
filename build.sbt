@@ -112,7 +112,7 @@ lazy val dbeamCore = project
     description := "DBeam dumps from SQL databases using JDBC and Apache Beam",
     libraryDependencies ++= Seq(
       "org.slf4j" % "slf4j-simple" % slf4jVersion,
-      "org.apache.beam" % "beam-runners-direct-java" % beamVersion,
+      "org.apache.beam" % "beam-runners-google-cloud-dataflow-java" % beamVersion,
       "org.apache.commons" % "commons-dbcp2" % "2.1.1",
       "org.postgresql" % "postgresql" % "42.2.+",
       "mysql" % "mysql-connector-java" % "5.1.+",

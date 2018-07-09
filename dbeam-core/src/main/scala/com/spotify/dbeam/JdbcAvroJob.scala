@@ -138,8 +138,6 @@ object JdbcAvroJob {
     val p = Pipeline.create(opts)
     prepareExport(p, args, output)
     val result = p.run()
-    val s = result.waitUntilFinish()
-    publishMetrics(MetricsHelper.getMetrics(result), output)
   }
 
   def main(cmdlineArgs: Array[String]): Unit = {
